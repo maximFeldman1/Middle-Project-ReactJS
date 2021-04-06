@@ -1,3 +1,7 @@
+*{
+    scroll-behavior: smooth;
+}
+
 .App{
     padding-top: 130px;
     min-height: 100vh;
@@ -9,6 +13,22 @@
 @media(max-width:700px){
     .App{
         padding-top: 80px;
+    }
+}
+
+.page-title{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-family: "Motserrat", sans-serif;
+    font-size: 2vw;
+    padding: 4px;
+    border-radius: 50px;
+}
+
+@media(max-width:1000px){
+    .page-title{
+        font-size: 6.4vw;
     }
 }
 
