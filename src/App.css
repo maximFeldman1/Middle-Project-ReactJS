@@ -6,7 +6,7 @@
     padding-top: 130px;
     min-height: 100vh;
     color: white;
-    background-color: #39445a;
+    background-color: white;
     padding-bottom: 70px;
 }
 
@@ -24,6 +24,7 @@
     font-size: 2vw;
     padding: 4px;
     border-radius: 50px;
+    color: black;
 }
 
 @media(max-width:1000px){

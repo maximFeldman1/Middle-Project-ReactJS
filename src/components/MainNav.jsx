@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     width: "100%",
     position:"fixed",
     bottom : 0,
-    backgroundColor:"#2d313a",
+    backgroundColor:"#000000",
     zIndex:99,
   },
 });
@@ -42,7 +42,7 @@ export default function SimpleBottomNavigation() {
     >
       <BottomNavigationAction
         style={{ color: "white" }}
-        label="Trending"
+        label="Top"
         icon={<Whatshot />}
       />
       <BottomNavigationAction
@@ -52,7 +52,7 @@ export default function SimpleBottomNavigation() {
       />
       <BottomNavigationAction
         style={{ color: "white" }}
-        label="TV Series"
+        label="Series"
         icon={<Tv />}
       />
       <BottomNavigationAction
