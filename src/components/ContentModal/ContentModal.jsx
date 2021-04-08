@@ -17,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   paper: {
-    width: "70%",
-    height: "70%",
+    width: "90%",
+    height: "90%",
     backgroundColor: "#000000",
     border: "8px solid #1565c0",
     borderRadius: 10,
@@ -123,7 +123,7 @@ export default function ContentModal({ children, media_type, id }) {
                     {content.overview}
                   </span>
                   <div>
-                    <Carousel media_type={media_type} id={id}/>
+                    {/* <Carousel media_type={media_type} id={id}/> */}
 
                   </div>
                   <Button

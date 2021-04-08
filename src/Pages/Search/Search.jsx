@@ -15,15 +15,19 @@ const Search = () => {
   const [searchText, setSearchText] = useState("");
 
   const fetchSearch = async () => {
-    const data = await axios.get(
-      `https://api.themoviedb.org/3/search/${
-        type ? "tv" : "movie"
-      }?api_key=${API_KEY}&language=en-US&query=${searchText}&page=${page}&include_adult=false`
-    );
+    try {
+      const data = await axios.get(
+        `https://api.themoviedb.org/3/search/${
+          type ? "tv" : "movie"
+        }?api_key=${API_KEY}&language=en-US&query=${searchText}&page=${page}&include_adult=false`
+      );
 
-    // console.log(data.data);
-    setContent(data.data.results);
-    setNumOfPage(data.data.total_pages);
+      // console.log(data.data);
+      setContent(data.data.results);
+      setNumOfPage(data.data.total_pages);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   useEffect(() => {
@@ -55,7 +59,7 @@ const Search = () => {
         textColor="primary"
         onChange={(event, newValue) => {
           setType(newValue);
-          setPage(1)
+          setPage(1);
         }}
         style={{ paddingBottom: 5 }}
       >
